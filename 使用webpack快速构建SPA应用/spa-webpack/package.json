@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "prod": "webpack --mode production",
+    "chart": "webpack --profile --json > stats.json --mode production",
     "dev:server": "webpack-dev-server --mode development"
   },
   "keywords": [],
@@ -17,14 +18,21 @@
     "css-loader": "^1.0.1",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.4",
+    "progress-bar-webpack-plugin": "^1.11.0",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
+    "speed-measure-webpack-plugin": "^1.2.3",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.26.0",
+    "webpack-build-notifier": "^0.1.30",
     "webpack-cli": "^3.1.2",
+    "webpack-dashboard": "^2.0.0",
     "webpack-deep-scope-plugin": "^1.6.0",
     "webpack-dev-server": "^3.1.10",
-    "webpack-merge": "^4.1.4"
+    "webpack-manifest-plugin": "^2.0.4",
+    "webpack-merge": "^4.1.4",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
   },
   "dependencies": {
     "lodash-es": "^4.17.11"

@@ -9,7 +9,9 @@ const sync = function () {
     fetch('/api/test').then(res => res.json()).then(data => {
         console.log('fetch结果', data.message);
     })
-    //document.getElementById('app').innerHTML = `<h1 class="${item.test}">Hello Webpack</h1>`;
+    setTimeout(() => {
+        document.getElementById('app').innerHTML = `<h1 class="${item.test}">Hello Webpack</h1>`;
+    }, 2000);
 }
 
 const isArrayFun = function (args) {

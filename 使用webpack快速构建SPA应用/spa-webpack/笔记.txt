@@ -1,0 +1,22 @@
+===========开发阶段=================
+1.开启多核压缩
+2.监控你的面板 //speed-measure-webpack-plugin
+3.开启通知面板 //webpack-build-notifier
+4.开启打包进度 // progress-bar-webpack-plugin
+5.开启打包面板 // webpack-dashboard(可选)
+6.开启窗口标题 //node-bash-title
+===========上线阶段================
+1.es6 不需要编译  type="module"   babel-loader
+set map es9
+https://cdn.polyfill.io/v2/polyfill.min.js?features=Map,Set //编译为了保证正确的语义，只能转换语法而不是去增加或修改原有的属性和方法 而处理这些方法的方案则被称为 polyfill
+2.前端缓存小负载 webapp
+    js -> a.xxx1.js
+    a.xxxx.js -> 代码 后台每次计算出当前包
+3.真正的loading
+4.单页 问题  多页转单页 webapp性能 请求的数量 runtime
+5.分析打包结果 CI
+http://webpack.github.io/analyse  //直观分析打包文件
+6. test exculde include  非常重要 很快
+7.压缩JS CSS  //webpack-parallel-uglify-plugin  uglifyjs-webpack-plugin  happypack   ts-loader  optimize-css-assets-webpack-plugin
+8.devtool eval
+9.cache-loader

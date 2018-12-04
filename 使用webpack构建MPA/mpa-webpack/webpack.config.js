@@ -7,7 +7,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: "./project/src/views/index.html"
+      template: "./project/src/views/index.html",
+      inject: false
     }),
     new htmlAfterWebpackPlugin()
   ]

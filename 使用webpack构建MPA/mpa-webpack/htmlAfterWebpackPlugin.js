@@ -1,11 +1,18 @@
-const pluginName = 'ConsoleLogOnBuildWebpackPlugin';
+const pluginName = 'HtmlAfterWebpackPlugin';
 
-class ConsoleLogOnBuildWebpackPlugin {
+class HtmlAfterWebpackPlugin {
   apply(compiler) {
-    compiler.hooks.run.tap(pluginName, compilation => {
+    compiler.hooks.compilation.tap(pluginName, compilation => {
       console.log("🍎🍌🍎🍌🍎🍌🍎🍌🍎🍌🍎🍌🍎🍌");
+      compilation.hooks.htmlPluginBeforeHtmlProcessing.tap(pluginName, htmlPluginData => {
+        const result = htmlPluginData.asstes.js;
+        let _html = htmlPluginData.html;
+        console.log("结果", result);
+        _html = _html.replace("<!--injectjs-->", `<script src="/${result}"></script>`);
+        htmlPluginData.html = _html;
+      })
     });
   }
 }
 
-module.exports = ConsoleLogOnBuildWebpackPlugin;
+module.exports = HtmlAfterWebpackPlugin;
