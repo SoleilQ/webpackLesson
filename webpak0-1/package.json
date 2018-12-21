@@ -1,5 +1,5 @@
 {
-  "name": "webpack-core",
+  "name": "webpak0-1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,11 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "acorn": "^6.0.4",
-    "acorn-walk": "^6.1.1",
-    "markdown-loader": "^4.0.0",
-    "tapable": "^1.1.1",
-    "webpack": "^4.26.1",
+    "ejs": "^2.6.1",
+    "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   }
 }
